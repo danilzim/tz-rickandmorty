@@ -1,11 +1,12 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue';
+import { onMounted, ref } from 'vue';
 import axios from 'axios';
 
 import CharactersList from './components/CharactersList.vue';
 import Pagination from './components/Pagination.vue';
 import UInput from './components/UInput.vue';
 import USelect from './components/USelect.vue';
+import { statusesSelected } from './constants/statusesSelected';
 
 const URL = ('https://rickandmortyapi.com/api/character');
 const characters = ref([]);
@@ -51,7 +52,7 @@ const handleChangePage = (page) => {
     <Pagination :pages="pages" :handleChangePage="handleChangePage" :activePage="activePage" />
     <div class="filter-wrapper">
       <UInput v-model="filteredName" />
-      <USelect v-model="selectedStatus" />
+      <USelect v-model="selectedStatus" :statusesSelected="statusesSelected"/>
       <button @click="fetchFilteredData" class="button">Применить</button>
     </div>
     <CharactersList :characters="characters" />

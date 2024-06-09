@@ -1,5 +1,7 @@
 <script setup>
-import { statusesSelected } from '../constants/statusesSelected'
+defineProps({
+    statusesSelected: Array,
+})
 </script>
 <template>
     <select v-model="selectedStatus" class="select">
@@ -8,7 +10,7 @@ import { statusesSelected } from '../constants/statusesSelected'
 </template>
 <style scoped>
 .select {
-    width: 70%;
+    width: 100%;
     padding: 10px;
     font-size: 15px;
     border-radius: 10px;
