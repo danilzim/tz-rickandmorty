@@ -70,4 +70,48 @@ defineProps({
     font-size: 23px;
     color: #ffffff;
 }
+
+@media (max-width: 950px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .text-info {
+        font-size: 15px;
+    }
+
+    .location {
+        font-size: 18px;
+    }
+
+    .card-content {
+        padding: 5px 10px;
+    }
+
+    .status {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 620px) {
+    .card-content {
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .text-info {
+        font-size: 10px;
+    }
+
+    .location {
+        font-size: 11px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+}
 </style>

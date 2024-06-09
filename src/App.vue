@@ -61,7 +61,9 @@ const handleChangePage = (page) => {
 
 <style scoped>
 .wrapper {
-  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .filter-wrapper {
@@ -77,5 +79,16 @@ const handleChangePage = (page) => {
   cursor: pointer;
   border-radius: 10px;
   font-size: 15px;
+}
+
+@media (max-width: 950px) {
+  .filter-wrapper {
+    padding: 10px;
+  }
+
+  .button {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 </style>

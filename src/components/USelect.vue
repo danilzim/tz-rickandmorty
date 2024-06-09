@@ -16,4 +16,12 @@ defineProps({
     border-radius: 10px;
     cursor: pointer;
 }
+
+@media (max-width: 950px) {
+    .select {
+        height: 70%;
+        padding: 5px;
+        font-size: 10px;
+    }
+}
 </style>
